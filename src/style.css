@@ -1,0 +1,197 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: 'Roboto', 'Segoe UI', Arial, Helvetica, sans-serif;
+  font-size: 20px;
+}
+
+body {
+  color: #b3b3b3;
+  background-color: #354259;
+  width: 100%;
+  height: 100vh;
+}
+
+#app {
+  width: 100%;
+  height: 100%;
+}
+
+.app-title {
+  text-align: center;
+  padding: 24px 32px;
+  font-size: 32px;
+  font-weight: bold;
+  font-family: 'Comfortaa', 'Roboto', 'Segoe UI', Arial, Helvetica, sans-serif;
+  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.15);
+}
+
+.content {
+  width: 100%;
+  height: 75%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: column;
+}
+
+button {
+  border: none;
+  padding: 16px 24px;
+  font-size: 1rem;
+  margin-left: 50%;
+  transform: translateX(-50%);
+  background-color: #d8d8d8;
+  color: #343434;
+  border-radius: 4px;
+  box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.15),
+              1px 1px 3px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #343434;
+  color: #d8d8d8;
+  box-shadow: 5px 5px 0 rgba(0, 0, 0, 0.4),
+              1px 1px 0 rgba(0, 0, 0, 0.6);
+}
+
+.result {
+  width: 80%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.field {
+  width: 80%;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  margin: 10px;
+  animation: showUpField 1s ease;
+}
+
+.field-title {
+  height: 100%;
+  width: 30%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  animation: showUpText 1s ease 0.3s;
+}
+
+.field-result {
+  width: 65%;
+  height: 80%;
+  margin-left: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 1.15rem;
+  animation: showUpText 1s ease 0.3s;
+}
+
+.pink {
+  background-color: #F473B9;
+  color: white;
+}
+
+.field.pink .field-title {
+  background-color: #FC7BC1;
+}
+
+.field.pink .field-result {
+  background-color: #EC65B1;
+}
+
+.green {
+  background-color: #6D8B74;
+  color: white;
+}
+
+.field.green .field-title {
+  background-color: #718F78;
+}
+
+.field.green .field-result {
+  background-color: #698770;
+}
+
+.blue {
+  background-color: #6874D8;
+  color: white;
+}
+
+.field.blue .field-title {
+  background-color: #606BD0;
+}
+
+.field.blue .field-result {
+  background-color: #646FD4;
+}
+
+.yellow {
+  background-color: #FFE69A;
+  color: black;
+}
+
+.field.yellow .field-title {
+  background-color: #FFEA9E;
+}
+
+.field.yellow .field-result {
+  background-color: #FBE296;
+}
+
+.red {
+  background-color: #FF5D5D;
+  color: white;
+}
+
+.field.red .field-title {
+  background-color: #FF6262;
+}
+
+.field.red .field-result {
+  background-color: #FB5959;
+}
+
+@keyframes showUpField {
+  0% {
+    width: 0;
+    opacity: 0;
+  }
+
+  75% {
+    width: 60%;
+    opacity: 1;
+  }
+
+  100% {
+    width: 80%;
+    opacity: 1;
+  }
+}
+
+@keyframes showUpText {
+  0% {
+    display: none;
+    opacity: 0;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .result, .field {
+    width: 100%;
+  }
+}
